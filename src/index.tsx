@@ -3,13 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.scss';
 import { SearchJobs } from './Components/Pages';
 import reportWebVitals from './reportWebVitals';
+import { store } from './Store';
+import { Provider } from 'react-redux';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <SearchJobs />
+    <Provider store={store}>
+      <SearchJobs />
+    </Provider>
   </React.StrictMode>
 );
 
