@@ -17,3 +17,8 @@ export interface SearchJobsData {
   jdList: JobData[];
   totalCount: number;
 }
+
+export interface SearchJobsAPIBodyData {
+  limit: number;
+  offset: number;
+}
