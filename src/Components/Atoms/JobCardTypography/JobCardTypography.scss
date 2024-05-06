@@ -1,0 +1,30 @@
+@import '../../../Theme/Mixins.scss';
+
+.MuiTypography-root {
+  &.title {
+    @include getFont('primary', 'small-X', 'semi-bold');
+    letter-spacing: 1px;
+    color: getColor('color-3');
+  }
+
+  &.sub-title {
+    @include getFont('primary', 'normal');
+    line-height: 1.5em;
+    color: getColor('color-4');
+  }
+
+  &.heading {
+    @include getFont('primary', 'normal-X', 'medium');
+    color: getColor('color-4');
+  }
+
+  &.type-tiny {
+    @include getFont('primary', 'tiny-X', 'medium');
+    color: getColor('color-4');
+  }
+
+  &.type-normal {
+    @include getFont('primary', 'normal');
+    color: getColor('color-5');
+  }
+}
