@@ -21,6 +21,13 @@ const MenuProps = {
   },
 };
 
+/**
+ * Custom Dropdown
+ * @param label 
+ * @param dropdownList 
+ * @param multiSelect 
+ * @returns 
+ */
 const Dropdown: FC<Props> = ({
   label,
   dropdownList,

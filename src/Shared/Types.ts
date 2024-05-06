@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface JobData {
   jdUid: string;
   jdLink: string;
@@ -21,4 +23,11 @@ export interface SearchJobsData {
 export interface SearchJobsAPIBodyData {
   limit: number;
   offset: number;
+}
+
+export interface DropdownListItem {
+  value: string;
+  label: ReactNode;
+  placeholder?: boolean;
+  customCls?: string;
 }
