@@ -1,0 +1,8 @@
+@import '../../../Theme/Mixins.scss';
+
+.MuiLink-root {
+  &.link-blue {
+    @include getFont('primary', 'normal');
+    color: getColor('color-6');
+  }
+}

@@ -9,8 +9,9 @@ interface Props extends PropsWithChildren {
 
 /**
  * Custom Typography
- * @param component 
- * @param customCls title, sub-title, heading, type-tiny, type-normal or any custom string
+ * @param children
+ * @param component
+ * @param customCls "title" | "sub-title" | "heading" | "type-tiny" | "type-normal" | any custom string
  */
 const CustomTypography: FC<Props> = ({
   children,
