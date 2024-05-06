@@ -1,3 +1,3 @@
-import JobCardTypography from "./JobCardTypography/JobCardTypography";
+import CustomTypography from "./CustomTypography/CustomTypography";
 
-export { JobCardTypography };
+export { CustomTypography };
