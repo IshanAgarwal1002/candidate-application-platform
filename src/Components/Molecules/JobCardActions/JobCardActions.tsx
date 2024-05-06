@@ -9,6 +9,11 @@ interface Props {
   referralLink: string;
 }
 
+/**
+ * Job Card's actions
+ * @param applyLink
+ * @param referralLink 
+ */
 const JobCardActions: FC<Props> = ({
   applyLink,
   referralLink,

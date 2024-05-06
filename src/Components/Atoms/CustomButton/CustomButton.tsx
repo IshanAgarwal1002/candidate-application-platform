@@ -10,7 +10,7 @@ interface Props extends PropsWithChildren {
 }
 
 /**
- * Custom Link
+ * Custom Button
  * @param children 
  * @param component
  * @param href

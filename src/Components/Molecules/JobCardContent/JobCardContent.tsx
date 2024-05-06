@@ -11,6 +11,13 @@ interface Props {
   maxExp: number | null;
 }
 
+/**
+ * Job Card's content
+ * @param jdLink
+ * @param jobDetailsFromCompany 
+ * @param minExp 
+ * @param maxExp 
+ */
 const JobCardContent: FC<Props> = ({
   jdLink,
   jobDetailsFromCompany,
