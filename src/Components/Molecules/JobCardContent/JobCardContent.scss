@@ -1,0 +1,30 @@
+@import '../../../Theme/Mixins.scss';
+
+.MuiBox-root.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  & .about-job-wrapper {
+    & .about-us {
+      @include getFontWeight('bold');
+    }
+
+    & .about-job {
+      max-height: 12em;
+      overflow: hidden;
+      @include getFont('primary', 'normal');
+      line-height: 1.2em;
+      color: getColor('color-4');
+      mask-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255), rgba(255, 255, 255, 0));
+    }
+
+    & .view-job-wrapper {
+      text-align: center;
+    }
+  }
+
+  & .job-experience-wrapper {
+    margin-top: 10px;
+  }
+}
