@@ -1,0 +1,18 @@
+@import '../../../Theme/Mixins.scss';
+
+.MuiButton-root {
+  &.primary {
+    border-radius: 8px;
+    padding: 8px 18px;
+    color: getColor('color-2');
+    background-color: getColor('color-9');
+  }
+
+  &.secondary {
+    border-radius: 8px;
+    padding: 8px 18px;
+    @include getFontWeight('normal');
+    color: getColor('color-1');
+    background-color: getColor('color-6');
+  }
+}

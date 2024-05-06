@@ -15,8 +15,8 @@ interface Props extends PropsWithChildren {
  */
 const CustomTypography: FC<Props> = ({
   children,
-  component='p',
-  customCls="",
+  component = 'p',
+  customCls = "",
 }) => {
   return (
     <Typography className={customCls} component={component}>{children}</Typography>

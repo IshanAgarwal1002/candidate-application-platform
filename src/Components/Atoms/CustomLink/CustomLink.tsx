@@ -20,16 +20,16 @@ interface Props extends PropsWithChildren {
 const CustomLink: FC<Props> = ({
   children,
   underline,
-  href="",
-  component='a',
-  customCls="",
+  href = "",
+  component = 'a',
+  customCls = "",
 }) => {
   return (
     <Link
       underline={underline || "hover"}
       href={href}
       component={component}
-      className={customCls} 
+      className={customCls}
     >
       {children}
     </Link>
