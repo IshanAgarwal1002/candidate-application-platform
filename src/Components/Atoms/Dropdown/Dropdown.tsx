@@ -8,6 +8,7 @@ interface Props {
   label: string;
   dropdownList: DropdownListItem[];
   multiSelect?: boolean;
+  handleOnSelect: (list: string[]) => void;
 }
 
 const ITEM_HEIGHT = 48;
@@ -32,6 +33,7 @@ const Dropdown: FC<Props> = ({
   label,
   dropdownList,
   multiSelect = false,
+  handleOnSelect,
 }) => {
   const [selectedValues, setSelectedValues] = useState<string[]>([]);
 
@@ -39,10 +41,11 @@ const Dropdown: FC<Props> = ({
     const {
       target: { value },
     } = event;
-    setSelectedValues(
-      // On autofill we get a stringified value.
-      typeof value === 'string' ? value.split(',') : value,
-    );
+
+    // On autofill we get a stringified value.
+    const list = typeof value === 'string' ? value.split(',') : value;
+    setSelectedValues(list);
+    handleOnSelect(list);
   };
 
   return (
@@ -65,15 +68,9 @@ const Dropdown: FC<Props> = ({
         MenuProps={MenuProps}
       >
         {dropdownList.map((item: DropdownListItem, index: number) => (
-          item.placeholder
-            ?
-            <MenuItem disabled key={`item-${index}`} value={""}>
-              <em>{item.label}</em>
-            </MenuItem>
-            :
-            <MenuItem key={`item-${index}`} value={item.value}>
-              {item.label}
-            </MenuItem>
+          <MenuItem key={`item-${index}`} disabled={item.placeholder} value={item.value}>
+            {item.label}
+          </MenuItem>
         ))}
       </Select>
     </FormControl>

@@ -16,6 +16,20 @@ export const DataHandler = createApi({
           "Content-Type": "application/json",
         }
       }),
+      serializeQueryArgs: ({ queryArgs }) => {
+        const newQueryArgs = { limit: queryArgs.limit };
+        return newQueryArgs;
+      },
+      merge: (currentCache, newItems) => {
+        console.log('123 currentCache', currentCache);
+        if (currentCache) {
+          return {
+            jdList: [...currentCache.jdList, ...newItems.jdList],
+            totalCount: newItems.totalCount,
+          };
+        }
+        return newItems;
+      },
       // Pick out data and prevent nested properties in a hook or selector
       transformResponse: (response: SearchJobsData, meta, arg) => response,
       transformErrorResponse: (
