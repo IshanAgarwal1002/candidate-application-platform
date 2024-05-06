@@ -1,0 +1,13 @@
+@import '../../../Theme/Mixins.scss';
+
+.MuiBadge-root {
+  &.primary {
+    width: max-content;
+    padding: 4px 6px;
+    box-shadow: getColor('color-8') 0px 2px 6px 0px;
+    border-radius: 10px;
+    border: 1px solid getColor('color-7');
+    color: getColor('color-4');
+    @include getFont('primary', 'tiny-s');
+  }
+}
