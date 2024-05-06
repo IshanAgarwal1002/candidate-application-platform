@@ -1,29 +1,43 @@
 @import './Constants.scss';
 
-@mixin getFont($font-name: 'primary', $font-size: 'normal', $font-weight: 'regular', $font-style: normal) {
+@mixin getFontName($font-name: 'primary') {
   @if map-has-key($font-family-map, $font-name) {
     font-family: map-get($font-family-map, $font-name);
   } @else {
     font-family: map-get($font-family-map, 'primary');
   }
+};
 
+@mixin getFontSize($font-size: 'normal') {
   @if map-has-key($font-size-map, $font-size) {
     font-size: map-get($font-size-map, $font-size);
   } @else {
     font-size: map-get($font-size-map, 'normal');
   }
+};
 
+@mixin getFontWeight($font-weight: 'regular') {
   @if map-has-key($font-weight-map, $font-weight) {
     font-weight: map-get($font-weight-map, $font-weight);
   } @else {
     font-weight: map-get($font-weight-map, 'regular');
   }
+};
 
+@mixin getFontStyle($font-style: normal) {
   @if $font-style {
     font-style: $font-style;
   } @else {
     font-style: normal;
   }
+};
+
+
+@mixin getFont($font-name: 'primary', $font-size: 'normal', $font-weight: 'regular', $font-style: normal) {
+  @include getFontName($font-name);
+  @include getFontSize($font-size);
+  @include getFontWeight($font-weight);
+  @include getFontStyle($font-style);
 };
 
 // Creates CSS variables. Should be used in main index.scss
