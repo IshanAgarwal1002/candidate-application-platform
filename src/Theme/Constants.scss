@@ -1,0 +1,46 @@
+// colors map
+$colors-map: (
+  // var-name: light-mode, dark-mode
+  color-1: (#fff, #fff),
+  color-2: (#000, #000),
+  color-3: (#8b8b8b, #8b8b8b),
+  color-4: (#000000de, #000000de),
+  color-5: (#4d596a, #4d596a),
+  color-6: (#4943da, #4943da),
+  color-7: (#e6e6e6, #e6e6e6),
+  color-8: (#0606060d, #0606060d),
+  color-9: (#55efc4, #55efc4),
+  // imgVarName: (url(), url()),
+);
+
+// font-family map
+$font-family-map: (
+  'primary': 'Roboto',
+);
+
+// font-weight map
+$font-weight-map: (
+  'thin': 100,
+  'extra-light': 200,
+  'light': 300,
+  'regular': 400,
+  'medium': 500,
+  'semi-bold': 600,
+  'bold': 700,
+  'extra-bold': 800,
+  'heavy': 900
+);
+
+// font-size map
+$font-size-map: (
+  'tiny-s': 9px,
+  'tiny': 10px,
+  'tiny-X': 11px,
+  'small': 12px,
+  'small-X': 13px,
+  'normal': 14px,
+  'normal-X': 16px,
+  'large': 18px,
+  'large-X': 20px,
+  'huge': 32px,
+);

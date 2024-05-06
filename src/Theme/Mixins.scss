@@ -1,0 +1,48 @@
+@import './Constants.scss';
+
+@mixin getFont($font-name: 'primary', $font-size: 'normal', $font-weight: 'regular', $font-style: normal) {
+  @if map-has-key($font-family-map, $font-name) {
+    font-family: map-get($font-family-map, $font-name);
+  } @else {
+    font-family: map-get($font-family-map, 'primary');
+  }
+
+  @if map-has-key($font-size-map, $font-size) {
+    font-size: map-get($font-size-map, $font-size);
+  } @else {
+    font-size: map-get($font-size-map, 'normal');
+  }
+
+  @if map-has-key($font-weight-map, $font-weight) {
+    font-weight: map-get($font-weight-map, $font-weight);
+  } @else {
+    font-weight: map-get($font-weight-map, 'regular');
+  }
+
+  @if $font-style {
+    font-style: $font-style;
+  } @else {
+    font-style: normal;
+  }
+};
+
+// Creates CSS variables. Should be used in main index.scss
+// Input: 'dark' | 'light'
+// Output: --var_name: value
+@mixin applyStyles($mode) {
+  @each $key, $value in $colors-map {
+    @if $mode == 'light' {
+      --c-#{$key}: #{nth($value, 1)};
+    }
+    @else if $mode == 'dark' {
+      --c-#{$key}: #{nth($value, 2)};
+    }
+  }
+}
+
+// Function to return color based on selected variable
+// Input: name
+// Output: --c-name
+@function getColor($var) {
+  @return var(--c-#{$var});
+}
