@@ -1,0 +1,20 @@
+.MuiBox-root.job-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  & .company-details-wrapper {
+    display: flex;
+    gap: 0.5rem;
+
+    & .company-logo {
+      width: 25px;
+    }
+
+    & .company-details {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+  }
+}
