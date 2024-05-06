@@ -1,6 +1,6 @@
 import React, { ElementType, FC, PropsWithChildren } from "react";
 import { Typography } from '@mui/material';
-import './JobCardTypography.scss';
+import './CustomTypography.scss';
 
 interface Props extends PropsWithChildren {
   component?: ElementType<any, keyof React.JSX.IntrinsicElements>;
@@ -12,7 +12,7 @@ interface Props extends PropsWithChildren {
  * @param component 
  * @param customCls title, sub-title, heading, type-tiny, type-normal or any custom string
  */
-const JobCardTypography: FC<Props> = ({
+const CustomTypography: FC<Props> = ({
   children,
   component='p',
   customCls="",
@@ -22,4 +22,4 @@ const JobCardTypography: FC<Props> = ({
   );
 };
 
-export default JobCardTypography;
+export default CustomTypography;
